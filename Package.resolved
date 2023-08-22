@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/skibinalexander/BlockchainSdk.git",
       "state" : {
-        "branch" : "develop",
-        "revision" : "8536c0c778da78b70dd725855d8b753731c48ab0"
+        "branch" : "main",
+        "revision" : "2141f04de5d29cdd9f3b784503303069df258041"
       }
     }
   ],
