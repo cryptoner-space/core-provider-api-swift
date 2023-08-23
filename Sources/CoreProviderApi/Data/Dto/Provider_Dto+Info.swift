@@ -14,14 +14,14 @@ extension Provider_Dto.Info {
 
 extension Provider_Dto.Info.Wallet {
     public struct Res<P: Codable>: Codable {
-        public let items: [Provider_Dto.Info.Wallet.Item]
+        public let accounts: [Provider_Dto.Info.Wallet.Item]
         public let payload: P
         
         public init(
-            items: [Provider_Dto.Info.Wallet.Item],
+            accounts: [Provider_Dto.Info.Wallet.Item],
             payload: P
         ) {
-            self.items = items
+            self.accounts = accounts
             self.payload = payload
         }
     }
