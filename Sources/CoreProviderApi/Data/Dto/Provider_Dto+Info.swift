@@ -14,18 +14,25 @@ extension Provider_Dto.Info {
 
 extension Provider_Dto.Info.Wallet {
     public struct Res<P: Codable>: Codable {
-        public let balance: String
-        public let currency: Blockchain.Currency
+        public let items: [Provider_Dto.Info.Wallet.Item]
         public let payload: P
         
         public init(
-            balance: String,
-            currency: Blockchain.Currency,
+            items: [Provider_Dto.Info.Wallet.Item],
             payload: P
         ) {
+            self.items = items
+            self.payload = payload
+        }
+    }
+    
+    public struct Item: Codable {
+        public let balance: String
+        public let currency: Blockchain.Currency
+        
+        public init(balance: String, currency: Blockchain.Currency) {
             self.balance = balance
             self.currency = currency
-            self.payload = payload
         }
     }
 }
@@ -43,6 +50,8 @@ extension Provider_Dto.Info.Wallet {
         /// State of wallet
         let accountState: AccountState
         
+        // MARK: - Init
+        
         public init(wallet: Bool, seqno: Int?, accountState: AccountState) {
             self.wallet = wallet
             self.seqno = seqno
@@ -55,5 +64,6 @@ extension Provider_Dto.Info.Wallet.TON {
     public enum AccountState: String, Codable {
         case active
         case uninitialized
+        case none
     }
 }
