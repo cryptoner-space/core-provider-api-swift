@@ -15,9 +15,9 @@ public protocol InfoRepository {
     )
     
     /// Obtain wallet info by currency
-    func wallet(
+    func wallet<P: Codable>(
         blockchain: Blockchain,
         address: String,
-        completion: @escaping (Result<[Provider_Dto.Info.Wallet.Res], Error>) -> Void
+        completion: @escaping (Result<[Provider_Dto.Info.Wallet.Res<P>], Error>) -> Void
     )
 }
