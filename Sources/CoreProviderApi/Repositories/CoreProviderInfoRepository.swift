@@ -15,7 +15,7 @@ public protocol CoreProviderInfoRepository {
     )
     
     /// Obtain wallet info by currency
-    func wallet<R: Decodable>(
+    func wallet<R: Codable>(
         blockchain: Blockchain,
         address: String,
         completion: @escaping (Result<R, Error>) -> Void

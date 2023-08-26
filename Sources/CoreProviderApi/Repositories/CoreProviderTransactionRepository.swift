@@ -10,13 +10,13 @@ import BlockchainSdk
 
 public protocol CoreProviderTranactionRepository {
     /// Obtain estimated fee transaction
-    func estimatedFee<T: Encodable>(
+    func estimatedFee<T: Codable>(
         transaction: T,
         completion: @escaping (Result<[Provider_Dto.Amount.Res], Error>) -> Void
     )
     
     /// Perform send transaction into blockchain
-    func sendTransaction<T: Encodable, R: Decodable>(
+    func sendTransaction<T: Codable, R: Codable>(
         transaction: T,
         completion: @escaping (Result<R, Error>) -> Void
     )
