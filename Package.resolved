@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "blockchainsdk",
+      "identity" : "blockchain-sdk-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/skibinalexander/BlockchainSdk.git",
+      "location" : "https://github.com/cryptoner-space/blockchain-sdk-swift.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2141f04de5d29cdd9f3b784503303069df258041"
+        "revision" : "ca5e65b6b27e521d18ba6745334181b1b5427dde"
       }
     }
   ],

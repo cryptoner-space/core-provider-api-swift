@@ -16,7 +16,7 @@ let package = Package(
             targets: ["CoreProviderApi"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/skibinalexander/BlockchainSdk.git", branch: "main")
+        .package(url: "https://github.com/cryptoner-space/blockchain-sdk-swift.git", branch: "main"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "CoreProviderApi",
             dependencies: [
-                .product(name: "BlockchainSdk", package: "BlockchainSdk"),
+                .product(name: "BlockchainSdk", package: "blockchain-sdk-swift"),
             ]
         )
     ]

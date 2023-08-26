@@ -8,16 +8,16 @@
 import Foundation
 import BlockchainSdk
 
-public protocol InfoRepository {
+public protocol CoreProviderInfoRepository {
     /// Obtain status provider info
     func status(
         completion: @escaping (Result<Void, Error>) -> Void
     )
     
     /// Obtain wallet info by currency
-    func wallet<P: Codable>(
+    func wallet<R: Decodable>(
         blockchain: Blockchain,
         address: String,
-        completion: @escaping (Result<Provider_Dto.Info.Wallet.Res<P>, Error>) -> Void
+        completion: @escaping (Result<R, Error>) -> Void
     )
 }
