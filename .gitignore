@@ -1,11 +1,3 @@
 *.xcuserstate
-Sources/CoreProviderApi
-
-
-Sources/.DS_Store
+.swiftpm/xcode/xcuserdata/skibinalexander.xcuserdatad/xcschemes/xcschememanagement.plist
 .DS_Store
-.swiftpm/xcode/xcuserdata/skibinalexander.xcuserdatad/xcschemes/xcschememanagement.plist
-.swiftpm/xcode/xcuserdata/skibinalexander.xcuserdatad/xcschemes/xcschememanagement.plist
-.swiftpm/xcode/xcuserdata/skibinalexander.xcuserdatad/xcschemes/xcschememanagement.plist
-Sources/CoreProviderApi/Data/Unions/.DS_Store
-Sources/CoreProviderApi/Data/.DS_Store
