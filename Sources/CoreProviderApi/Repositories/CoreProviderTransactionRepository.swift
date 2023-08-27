@@ -12,7 +12,7 @@ public protocol CoreProviderTranactionRepository {
     /// Obtain estimated fee transaction
     func estimatedFee<T: Codable>(
         transaction: T,
-        completion: @escaping (Result<[Provider_Dto.Amount.Res], Error>) -> Void
+        completion: @escaping (Result<[CurrencyAmount], Error>) -> Void
     )
     
     /// Perform send transaction into blockchain

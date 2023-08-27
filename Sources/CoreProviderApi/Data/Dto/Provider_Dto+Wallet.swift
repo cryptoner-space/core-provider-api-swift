@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import BlockchainSdk
 
 public extension Provider_Dto.Info.Wallet {
     struct BTC {}
@@ -44,7 +45,7 @@ public extension Provider_Dto.Info.Wallet.TON {
         public let accountState: AccountState
         
         /// Balance of wallet
-        public let amounts: [Provider_Dto.Amount.Res]
+        public let amounts: [CurrencyAmount]
         
         // MARK: - Init
         
@@ -52,7 +53,7 @@ public extension Provider_Dto.Info.Wallet.TON {
             wallet: Bool,
             seqno: Int,
             accountState: AccountState,
-            amounts: [Provider_Dto.Amount.Res]
+            amounts: [CurrencyAmount]
         ) {
             self.wallet = wallet
             self.seqno = seqno
