@@ -10,6 +10,7 @@ import BlockchainSdk
 
 public struct Provider_Dto {
     public struct Info {}
+    public struct Transaction {}
 }
 
 extension Provider_Dto.Info {
