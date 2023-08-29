@@ -10,6 +10,7 @@ import BlockchainSdk
 
 public extension Provider_Dto.Transaction {
     struct Fee {}
+    struct Send {}
 }
 
 public extension Provider_Dto.Transaction.Fee {
@@ -18,6 +19,40 @@ public extension Provider_Dto.Transaction.Fee {
         
         public init(fees: [CurrencyAmount]) {
             self.fees = fees
+        }
+    }
+}
+
+public extension Provider_Dto.Transaction.Send {
+    struct Res: Codable {
+        public let hash: String?
+        
+        public init(hash: String?) {
+            self.hash = hash
+        }
+    }
+}
+
+// MARK: - TON
+
+public extension Provider_Dto.Transaction.Fee {
+    struct Req: Codable {
+        public let address: String
+        public let body: String
+        
+        public init(address: String, body: String) {
+            self.address = address
+            self.body = body
+        }
+    }
+}
+
+public extension Provider_Dto.Transaction.Send {
+    struct Req: Codable {
+        public let message: String
+        
+        public init(message: String) {
+            self.message = message
         }
     }
 }
