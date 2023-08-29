@@ -16,8 +16,8 @@ public protocol CoreProviderTranactionRepository {
     )
     
     /// Perform send transaction into blockchain
-    func sendTransaction<T: Codable, R: Codable>(
+    func sendTransaction<T: Codable>(
         transaction: T,
-        completion: @escaping (Result<R, Error>) -> Void
+        completion: @escaping (Result<Provider_Dto.Transaction.Send.Res, Error>) -> Void
     )
 }
