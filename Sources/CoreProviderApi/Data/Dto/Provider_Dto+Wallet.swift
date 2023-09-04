@@ -26,7 +26,18 @@ public extension Provider_Dto.Info.Wallet.BTC {
 // MARK: - ETH
 
 public extension Provider_Dto.Info.Wallet.ETH {
-    struct Res: Codable {}
+    struct Res: Codable {
+        /// Balance of wallet
+        public let amounts: [AmountCurrency]
+        
+        // MARK: - Init
+        
+        public init(
+            amounts: [AmountCurrency]
+        ) {
+            self.amounts = amounts
+        }
+    }
 }
 
 
@@ -34,7 +45,6 @@ public extension Provider_Dto.Info.Wallet.ETH {
 
 public extension Provider_Dto.Info.Wallet.TON {
     struct Res: Codable {
-        
         /// Is chain transaction wallet
         public let wallet: Bool
         
@@ -45,7 +55,7 @@ public extension Provider_Dto.Info.Wallet.TON {
         public let accountState: AccountState
         
         /// Balance of wallet
-        public let amounts: [CurrencyAmount]
+        public let amounts: [AmountCurrency]
         
         // MARK: - Init
         
@@ -53,7 +63,7 @@ public extension Provider_Dto.Info.Wallet.TON {
             wallet: Bool,
             seqno: Int,
             accountState: AccountState,
-            amounts: [CurrencyAmount]
+            amounts: [AmountCurrency]
         ) {
             self.wallet = wallet
             self.seqno = seqno

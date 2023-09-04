@@ -15,9 +15,9 @@ public extension Provider_Dto.Transaction {
 
 public extension Provider_Dto.Transaction.Fee {
     struct Res: Codable {
-        public let fees: [CurrencyAmount]
+        public let fees: [AmountCurrency]
         
-        public init(fees: [CurrencyAmount]) {
+        public init(fees: [AmountCurrency]) {
             self.fees = fees
         }
     }
