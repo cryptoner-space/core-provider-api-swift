@@ -27,10 +27,10 @@ public extension Provider_Dto.Info.Wallet.BTC {
 
 public extension Provider_Dto.Info.Wallet.ETH {
     struct Req: Codable {
-        public let currency: [Currency]
+        public let currencies: [Currency]
         
-        public init(currency: [Currency]) {
-            self.currency = currency
+        public init(currencies: [Currency]) {
+            self.currencies = currencies
         }
     }
     
@@ -53,10 +53,10 @@ public extension Provider_Dto.Info.Wallet.ETH {
 
 public extension Provider_Dto.Info.Wallet.TON {
     struct Req: Codable {
-        public let currency: [Currency]
+        public let currencies: [Currency]
         
-        public init(currency: [Currency]) {
-            self.currency = currency
+        public init(currencies: [Currency]) {
+            self.currencies = currencies
         }
     }
     
