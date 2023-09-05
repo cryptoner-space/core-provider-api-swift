@@ -26,6 +26,14 @@ public extension Provider_Dto.Info.Wallet.BTC {
 // MARK: - ETH
 
 public extension Provider_Dto.Info.Wallet.ETH {
+    struct Req: Codable {
+        public let currency: [Currency]
+        
+        public init(currency: [Currency]) {
+            self.currency = currency
+        }
+    }
+    
     struct Res: Codable {
         /// Balance of wallet
         public let amounts: [AmountCurrency]
@@ -44,6 +52,14 @@ public extension Provider_Dto.Info.Wallet.ETH {
 // MARK: - TON
 
 public extension Provider_Dto.Info.Wallet.TON {
+    struct Req: Codable {
+        public let currency: [Currency]
+        
+        public init(currency: [Currency]) {
+            self.currency = currency
+        }
+    }
+    
     struct Res: Codable {
         /// Is chain transaction wallet
         public let wallet: Bool
