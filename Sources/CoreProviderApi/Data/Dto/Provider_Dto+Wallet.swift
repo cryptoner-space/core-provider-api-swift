@@ -45,14 +45,14 @@ public extension Provider_Dto.Info.Wallet.BTC {
         public let balance: AmountCurrency
         public let unconfirmedBalance: AmountCurrency
         public let unconfirmedTxs: Int
-        public let txs: Int                                 /// All transactions count
+        public let txs: Int
         
         public init(
             address: String,
             balance: AmountCurrency,
             unconfirmedBalance: AmountCurrency,
             unconfirmedTxs: Int,
-            txs: Int                                 /// All transactions count
+            txs: Int
         ) {
             self.address = address
             self.balance = balance
