@@ -46,6 +46,20 @@ public extension Provider_Dto.Info.Wallet.BTC {
         public let unconfirmedBalance: AmountCurrency
         public let unconfirmedTxs: Int
         public let txs: Int                                 /// All transactions count
+        
+        public init(
+            address: String,
+            balance: AmountCurrency,
+            unconfirmedBalance: AmountCurrency,
+            unconfirmedTxs: Int,
+            txs: Int                                 /// All transactions count
+        ) {
+            self.address = address
+            self.balance = balance
+            self.unconfirmedBalance = unconfirmedBalance
+            self.unconfirmedTxs = unconfirmedTxs
+            self.txs = txs
+        }
     }
 }
 
