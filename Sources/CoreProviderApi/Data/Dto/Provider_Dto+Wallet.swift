@@ -9,6 +9,26 @@ import Foundation
 import BlockchainSdk
 
 public extension Provider_Dto.Info.Wallet {
+    struct Single {
+        public struct Req: Codable {
+            public let currency: Currency
+            
+            public init(currency: Currency) {
+                self.currency = currency
+            }
+        }
+    }
+    
+    struct Multi {
+        public struct Req: Codable {
+            public let currency: Currency
+            
+            public init(currency: Currency) {
+                self.currency = currency
+            }
+        }
+    }
+    
     struct BTC {}
     struct ETH {}
     struct TON {}
@@ -20,20 +40,18 @@ public extension Provider_Dto.Info.Wallet {
 // MARK: - BTC
 
 public extension Provider_Dto.Info.Wallet.BTC {
-    struct Res: Codable {}
+    struct Res: Codable {
+        public let address: String
+        public let balance: AmountCurrency
+        public let unconfirmedBalance: AmountCurrency
+        public let unconfirmedTxs: Int
+        public let txs: Int                                 /// All transactions count
+    }
 }
 
 // MARK: - ETH
 
 public extension Provider_Dto.Info.Wallet.ETH {
-    struct Req: Codable {
-        public let currencies: [Currency]
-        
-        public init(currencies: [Currency]) {
-            self.currencies = currencies
-        }
-    }
-    
     struct Res: Codable {
         /// Balance of wallet
         public let amounts: [AmountCurrency]
