@@ -9,15 +9,11 @@ import Foundation
 import BlockchainSdk
 
 public protocol CoreProviderInfoRepository {
-    /// Obtain status provider info
-    func status(
-        completion: @escaping (Result<Void, Error>) -> Void
-    )
-    
     /// Obtain wallet info by currency
-    func wallet<R: Codable>(
+    func wallet<D: Codable, R: Codable>(
         blockchain: Blockchain,
         address: String,
+        data: D,
         completion: @escaping (Result<R, Error>) -> Void
     )
 }
