@@ -21,10 +21,10 @@ public extension Provider_Dto.Info.Wallet {
     
     struct Multi {
         public struct Req: Codable {
-            public let currency: Currency
+            public let currencies: [Currency]
             
-            public init(currency: Currency) {
-                self.currency = currency
+            public init(currencies: [Currency]) {
+                self.currencies = currencies
             }
         }
     }
