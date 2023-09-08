@@ -147,7 +147,7 @@ public extension Provider_Dto.Info.Wallet.TON {
 
 // MARK: - TRN
 
-extension Provider_Dto.Info.Wallet.TRN {
+public extension Provider_Dto.Info.Wallet.TRN {
     struct Res: Codable {
         /// Balance of wallet
         public let amounts: [AmountCurrency]
