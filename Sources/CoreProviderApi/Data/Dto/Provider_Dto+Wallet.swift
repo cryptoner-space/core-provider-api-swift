@@ -17,6 +17,14 @@ public extension Provider_Dto.Info.Wallet {
                 self.currency = currency
             }
         }
+        
+        public struct Res: Codable {
+            public let amount: AmountCurrency
+            
+            public init(amount: AmountCurrency) {
+                self.amount = amount
+            }
+        }
     }
     
     struct Multi {
@@ -25,6 +33,14 @@ public extension Provider_Dto.Info.Wallet {
             
             public init(currencies: [Currency]) {
                 self.currencies = currencies
+            }
+        }
+        
+        public struct Res: Codable {
+            public let amounts: [AmountCurrency]
+            
+            public init(amounts: [AmountCurrency]) {
+                self.amounts = amounts
             }
         }
     }
@@ -132,7 +148,18 @@ public extension Provider_Dto.Info.Wallet.TON {
 // MARK: - TRN
 
 extension Provider_Dto.Info.Wallet.TRN {
-    public struct Res: Codable {}
+    struct Res: Codable {
+        /// Balance of wallet
+        public let amounts: [AmountCurrency]
+        
+        // MARK: - Init
+        
+        public init(
+            amounts: [AmountCurrency]
+        ) {
+            self.amounts = amounts
+        }
+    }
 }
 
 // MARK: - BNB
