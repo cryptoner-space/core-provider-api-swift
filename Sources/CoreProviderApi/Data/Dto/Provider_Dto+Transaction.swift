@@ -32,31 +32,3 @@ public extension Provider_Dto.Transaction.Send {
         }
     }
 }
-
-// MARK: - TON
-
-public extension Provider_Dto.Transaction.Fee {
-    struct TON {
-        public struct Req: Codable {
-            public let address: String
-            public let body: String
-            
-            public init(address: String, body: String) {
-                self.address = address
-                self.body = body
-            }
-        }
-    }
-}
-
-public extension Provider_Dto.Transaction.Send {
-    struct TON {
-        public struct Req: Codable {
-            public let message: String
-            
-            public init(message: String) {
-                self.message = message
-            }
-        }
-    }
-}
