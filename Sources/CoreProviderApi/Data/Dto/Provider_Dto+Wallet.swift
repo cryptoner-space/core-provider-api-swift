@@ -17,47 +17,15 @@ public extension Provider_Dto.Info.Wallet {
         }
     }
     
-    struct Res: Codable {
-        public let amount: AmountCurrency
+    struct Res<P: Codable>: Codable {
+        public let amounts: [AmountCurrency]
+        public let data: P?
         
-        public init(amount: AmountCurrency) {
-            self.amount = amount
+        public init(amounts: [AmountCurrency], data: P?) {
+            self.amounts = amounts
+            self.data = data
         }
     }
     
-    struct Single {
-        public struct Req: Codable {
-            public let currency: Currency
-            
-            public init(currency: Currency) {
-                self.currency = currency
-            }
-        }
-        
-        public struct Res: Codable {
-            public let amount: AmountCurrency
-            
-            public init(amount: AmountCurrency) {
-                self.amount = amount
-            }
-        }
-    }
-    
-    struct Multi {
-        public struct Req: Codable {
-            public let currencies: [Currency]
-            
-            public init(currencies: [Currency]) {
-                self.currencies = currencies
-            }
-        }
-        
-        public struct Res: Codable {
-            public let amounts: [AmountCurrency]
-            
-            public init(amounts: [AmountCurrency]) {
-                self.amounts = amounts
-            }
-        }
-    }
+    struct Empty: Codable {}
 }
