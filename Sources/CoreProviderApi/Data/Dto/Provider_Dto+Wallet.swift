@@ -9,11 +9,13 @@ import Foundation
 import BlockchainSdk
 
 public extension Provider_Dto.Info.Wallet {
-    struct Req: Codable {
+    struct Req<P: Codable>: Codable {
         public let currency: Currency
+        public let data: P?
         
-        public init(currency: Currency) {
+        public init(currency: Currency, data: P? = nil) {
             self.currency = currency
+            self.data = data
         }
     }
     
@@ -21,7 +23,7 @@ public extension Provider_Dto.Info.Wallet {
         public let amounts: [AmountCurrency]
         public let data: P?
         
-        public init(amounts: [AmountCurrency], data: P?) {
+        public init(amounts: [AmountCurrency], data: P? = nil) {
             self.amounts = amounts
             self.data = data
         }
