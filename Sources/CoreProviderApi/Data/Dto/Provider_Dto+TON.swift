@@ -33,21 +33,16 @@ public extension Provider_Dto.Info.Wallet.TON {
         /// State of wallet
         public let accountState: AccountState
         
-        /// Balance of wallet
-        public let amounts: [AmountCurrency]
-        
         // MARK: - Init
         
         public init(
             wallet: Bool,
             seqno: Int,
-            accountState: AccountState,
-            amounts: [AmountCurrency]
+            accountState: AccountState
         ) {
             self.wallet = wallet
             self.seqno = seqno
             self.accountState = accountState
-            self.amounts = amounts
         }
     }
 }
