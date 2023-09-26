@@ -8,7 +8,9 @@
 import Foundation
 import BlockchainSdk
 
-// MARK: - XRP
+public extension Provider_Dto.Info.Wallet {
+    struct XRP {}
+}
 
 extension Provider_Dto.Info.Wallet.XRP {
     public struct Res: Codable {}

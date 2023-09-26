@@ -8,7 +8,9 @@
 import Foundation
 import BlockchainSdk
 
-// MARK: - ETH
+public extension Provider_Dto.Info.Wallet {
+    struct ETH {}
+}
 
 public extension Provider_Dto.Info.Wallet.ETH {
     struct Res: Codable {

@@ -8,6 +8,10 @@
 import Foundation
 import BlockchainSdk
 
+public extension Provider_Dto.Info.Wallet {
+    struct TON {}
+}
+
 public extension Provider_Dto.Info.Wallet.TON {
     enum AccountState: String, Codable {
         case active

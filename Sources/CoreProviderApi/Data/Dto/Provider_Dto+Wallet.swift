@@ -9,6 +9,22 @@ import Foundation
 import BlockchainSdk
 
 public extension Provider_Dto.Info.Wallet {
+    struct Req: Codable {
+        public let currency: Currency
+        
+        public init(currency: Currency) {
+            self.currency = currency
+        }
+    }
+    
+    struct Res: Codable {
+        public let amount: AmountCurrency
+        
+        public init(amount: AmountCurrency) {
+            self.amount = amount
+        }
+    }
+    
     struct Single {
         public struct Req: Codable {
             public let currency: Currency
@@ -44,11 +60,4 @@ public extension Provider_Dto.Info.Wallet {
             }
         }
     }
-    
-    struct BTC {}
-    struct ETH {}
-    struct TON {}
-    struct TRN {}
-    struct XRP {}
-    struct BNB {}
 }

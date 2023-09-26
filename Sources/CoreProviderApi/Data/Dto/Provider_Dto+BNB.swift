@@ -8,7 +8,9 @@
 import Foundation
 import BlockchainSdk
 
-// MARK: - BNB
+public extension Provider_Dto.Info.Wallet {
+    struct BNB {}
+}
 
 extension Provider_Dto.Info.Wallet.BNB {
     public struct Res: Codable {}
