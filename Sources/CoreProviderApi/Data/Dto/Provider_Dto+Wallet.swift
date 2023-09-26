@@ -10,11 +10,11 @@ import BlockchainSdk
 
 public extension Provider_Dto.Info.Wallet {
     struct Req<P: Codable>: Codable {
-        public let currency: Currency
+        public let inputs: [Currency]
         public let data: P?
         
-        public init(currency: Currency, data: P? = nil) {
-            self.currency = currency
+        public init(inputs: [Currency], data: P? = nil) {
+            self.inputs = inputs
             self.data = data
         }
     }
